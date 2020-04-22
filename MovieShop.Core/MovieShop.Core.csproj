@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Exceptions\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="ApiModels\" />
+    <Folder Include="MappingProfiles\" />
+    <Folder Include="ServiceInterfaces\" />
+    <Folder Include="RepositoryInterfaces\" />
+  </ItemGroup>
+
+</Project>

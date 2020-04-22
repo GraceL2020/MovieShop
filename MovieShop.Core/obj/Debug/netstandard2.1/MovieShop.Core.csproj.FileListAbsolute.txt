@@ -1,0 +1,9 @@
+C:\Users\Grace\source\repos\MovieShop\MovieShop.Core\bin\Debug\netstandard2.1\MovieShop.Core.deps.json
+C:\Users\Grace\source\repos\MovieShop\MovieShop.Core\bin\Debug\netstandard2.1\MovieShop.Core.dll
+C:\Users\Grace\source\repos\MovieShop\MovieShop.Core\bin\Debug\netstandard2.1\MovieShop.Core.pdb
+C:\Users\Grace\source\repos\MovieShop\MovieShop.Core\obj\Debug\netstandard2.1\MovieShop.Core.csprojAssemblyReference.cache
+C:\Users\Grace\source\repos\MovieShop\MovieShop.Core\obj\Debug\netstandard2.1\MovieShop.Core.csproj.CoreCompileInputs.cache
+C:\Users\Grace\source\repos\MovieShop\MovieShop.Core\obj\Debug\netstandard2.1\MovieShop.Core.AssemblyInfoInputs.cache
+C:\Users\Grace\source\repos\MovieShop\MovieShop.Core\obj\Debug\netstandard2.1\MovieShop.Core.AssemblyInfo.cs
+C:\Users\Grace\source\repos\MovieShop\MovieShop.Core\obj\Debug\netstandard2.1\MovieShop.Core.dll
+C:\Users\Grace\source\repos\MovieShop\MovieShop.Core\obj\Debug\netstandard2.1\MovieShop.Core.pdb
