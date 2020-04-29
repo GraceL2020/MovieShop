@@ -10,7 +10,12 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using MovieShop.Core.Entities;
+using MovieShop.Core.RepositoryInterfaces;
+using MovieShop.Core.ServiceInterfaces;
 using MovieShop.Infrastructure.Data;
+using MovieShop.Infrastructure.Repositories;
+using MovieShop.Infrastructure.Services;
 
 namespace MovieShop.API
 {
@@ -30,6 +35,16 @@ namespace MovieShop.API
             services.AddDbContext<MovieShopDbContext>(
                 options => options.UseSqlServer(
                     Configuration.GetConnectionString("MovieShopDbConnection")));
+
+            //register repositories
+            services.AddScoped<IAsyncRepository<Genre>, EfRepository<Genre>>();
+            services.AddScoped<IMovieRepository, MovieRepository>();
+            services.AddScoped<ICastRepository, CastRepository>();
+
+            //register services
+            services.AddScoped<IGenreService, GenreService>();
+            services.AddScoped<IMovieService, MovieService>();
+            services.AddScoped<ICastService, CastService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +54,13 @@ namespace MovieShop.API
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseCors(builder =>
+            {
+                builder.WithOrigins("http://localhost:55332")
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowCredentials();
+            });
 
             app.UseRouting();
 

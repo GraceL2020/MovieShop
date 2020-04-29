@@ -9,8 +9,6 @@
     <Folder Include="Helpers\" />
     <Folder Include="ApiModels\" />
     <Folder Include="MappingProfiles\" />
-    <Folder Include="ServiceInterfaces\" />
-    <Folder Include="RepositoryInterfaces\" />
   </ItemGroup>
 
 </Project>

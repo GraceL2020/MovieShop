@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MovieShop.Core.ServiceInterfaces;
 
 namespace MovieShop.API.Controllers
 {
@@ -11,11 +12,17 @@ namespace MovieShop.API.Controllers
     [ApiController]
     public class GenresController : ControllerBase
     {
+        private readonly IGenreService _genreService;
+        public GenresController(IGenreService genreService)
+        {
+            _genreService = genreService;
+        }
         [HttpGet]
         [Route("")]
-        public IActionResult GetAllGenres()
+        public async Task<IActionResult> GetAllGenres()
         {
-            return Ok("test data");
+            var genres = await _genreService.GetAllGenres();
+            return Ok(genres);
         }
 
         [HttpGet]
