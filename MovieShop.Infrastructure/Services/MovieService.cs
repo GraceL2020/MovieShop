@@ -31,5 +31,10 @@ namespace MovieShop.Infrastructure.Services
         {
             return await _movieRepository.GetTopGrossingMovies();
         }
+
+        public async Task<IEnumerable<Movie>> GetMoviesForCast(int castId)
+        {
+            return await _movieRepository.GetMoviesForCast(castId);
+        }
     }
 }

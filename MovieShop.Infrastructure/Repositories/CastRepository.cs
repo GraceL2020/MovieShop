@@ -25,13 +25,16 @@ namespace MovieShop.Infrastructure.Repositories
             return cast;
         }
 
-        public async Task<IEnumerable<Movie>> GetMoviesForCast(int castId)
+        public async Task<IEnumerable<Object>> GetCastsForMovie(int movieId)
         {
-            var movies = await _dbContext.MovieCasts.Where(mc => mc.CastId == castId)
-                            .Include(mc => mc.Movie)
-                            .Select(m => m.Movie)
+            var casts = await _dbContext.MovieCasts.Where(mc => mc.MovieId == movieId)
+                            .Include(mc => mc.Cast)
+                            .Select(m => new { m.Cast.Id, m.Cast.Name,m.Cast.Gender, m.Cast.ProfilePath,m.Cast.TmdbUrl,m.Character})
                             .ToListAsync();
-            return movies;
+            
+            return casts;
         }
+
+        
     }
 }

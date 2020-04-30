@@ -19,11 +19,11 @@ namespace MovieShop.Infrastructure.Repositories
 
         public override async Task<Movie> GetByIdAsync(int id)
         {
-            var movie = await _dbContext.Movies
+            var movie = await _dbContext.Movies.Where(m=>m.Id == id)
                         //.Include(m => m.MovieCasts).ThenInclude(m => m.Cast)
                         //.Include(m => m.MovieGenres)
                         //.ThenInclude(m => m.Genre)
-                        .FirstOrDefaultAsync(m => m.Id == id);
+                        .FirstOrDefaultAsync();
             //var movie = await _dbContext.Set<Movie>().Where(m=>m.Id==id)
             //                //.Include(m=>m.MovieGenres).ThenInclude(mg=>mg.Genre)
             //                //.Include(m=>m.MovieCasts).ThenInclude(mc=>mc.Cast)
@@ -67,6 +67,15 @@ namespace MovieShop.Infrastructure.Repositories
         public async Task<IEnumerable<Movie>> GetTopRatedMovies()
         {
             var movies = await _dbContext.Movies.OrderByDescending(m => m.Reviews.Average(r => r.Rating)).Take(50).ToListAsync();
+            return movies;
+        }
+
+        public async Task<IEnumerable<Movie>> GetMoviesForCast(int castId)
+        {
+            var movies = await _dbContext.MovieCasts.Where(mc => mc.CastId == castId)
+                            .Include(mc => mc.Movie)
+                            .Select(m => m.Movie)
+                            .ToListAsync();
             return movies;
         }
     }

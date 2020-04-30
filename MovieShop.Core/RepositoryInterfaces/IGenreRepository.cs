@@ -4,11 +4,10 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MovieShop.Core.ServiceInterfaces
+namespace MovieShop.Core.RepositoryInterfaces
 {
-    public interface IGenreService
+    public interface IGenreRepository : IAsyncRepository<Genre>
     {
-        Task<IEnumerable<Genre>> GetAllGenres();
         Task<IEnumerable<Genre>> GetGenresByMovieId(int movieId);
     }
 }

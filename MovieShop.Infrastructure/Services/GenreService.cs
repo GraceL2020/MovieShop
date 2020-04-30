@@ -10,9 +10,9 @@ namespace MovieShop.Infrastructure.Services
 {
     public class GenreService : IGenreService
     {
-        private readonly IAsyncRepository<Genre> _genreRepository;
+        private readonly IGenreRepository _genreRepository;
 
-        public GenreService(IAsyncRepository<Genre> genreRepository)
+        public GenreService(IGenreRepository genreRepository)
         {
             _genreRepository = genreRepository;
         }
@@ -20,6 +20,11 @@ namespace MovieShop.Infrastructure.Services
         {
             var genres = await _genreRepository.ListAllAsync();
             return genres;
+        }
+
+        public async Task<IEnumerable<Genre>> GetGenresByMovieId(int movieId)
+        {
+            return await _genreRepository.GetGenresByMovieId(movieId);
         }
     }
 }

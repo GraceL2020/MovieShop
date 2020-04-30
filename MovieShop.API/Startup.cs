@@ -37,7 +37,8 @@ namespace MovieShop.API
                     Configuration.GetConnectionString("MovieShopDbConnection")));
 
             //register repositories
-            services.AddScoped<IAsyncRepository<Genre>, EfRepository<Genre>>();
+            //services.AddScoped<IAsyncRepository<Genre>, EfRepository<Genre>>();
+            services.AddScoped<IGenreRepository, GenreRepository>();
             services.AddScoped<IMovieRepository, MovieRepository>();
             services.AddScoped<ICastRepository, CastRepository>();
 

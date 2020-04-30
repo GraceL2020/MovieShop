@@ -8,8 +8,10 @@ namespace MovieShop.Core.ServiceInterfaces
 {
     public interface ICastService
     {
-        Task<IEnumerable<Movie>> GetMoviesForCast(int castId);
+        
 
         Task<Cast> GetCastById(int id);
+
+        Task<IEnumerable<Object>> GetCastsForMovie(int movieId);
     }
 }

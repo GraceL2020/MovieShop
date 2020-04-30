@@ -8,6 +8,8 @@ namespace MovieShop.Core.RepositoryInterfaces
 {
     public interface ICastRepository: IAsyncRepository<Cast>
     {
-        Task<IEnumerable<Movie>> GetMoviesForCast(int castId);
+        
+
+        Task<IEnumerable<Object>> GetCastsForMovie(int movieId);
     }
 }
