@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "/6pwGE9ZbkcNBMG1a0syCujVLOocm9y0fP5ARhuE33+4uNGivuU5+yqQnGKv/6BdTy77vyvoShu9HPNupk3Kbg==",
+  "dgSpecHash": "NT1UdMLiukMbbJdKyH/ha7XpFs8CeAANkfPAdi672OiNVr2N1LrML9Y8ADX6090UiFWCC7kSrfKLq0/lzrsOBQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Grace\\source\\repos\\MovieShop\\MovieShop.Infrastructure\\MovieShop.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Grace\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.3\\microsoft.aspnetcore.cryptography.internal.3.1.3.nupkg.sha512",
+    "C:\\Users\\Grace\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.3\\microsoft.aspnetcore.cryptography.keyderivation.3.1.3.nupkg.sha512",
     "C:\\Users\\Grace\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\Grace\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\Grace\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

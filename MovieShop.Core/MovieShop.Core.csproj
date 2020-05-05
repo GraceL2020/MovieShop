@@ -7,7 +7,6 @@
   <ItemGroup>
     <Folder Include="Exceptions\" />
     <Folder Include="Helpers\" />
-    <Folder Include="ApiModels\" />
     <Folder Include="MappingProfiles\" />
   </ItemGroup>
 

@@ -125,5 +125,14 @@ C:\Users\Grace\source\repos\MovieShop\MovieShop.API\bin\Debug\netcoreapp3.1\runt
 C:\Users\Grace\source\repos\MovieShop\MovieShop.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Grace\source\repos\MovieShop\MovieShop.API\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Grace\source\repos\MovieShop\MovieShop.API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Grace\source\repos\MovieShop\MovieShop.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Grace\source\repos\MovieShop\MovieShop.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Grace\source\repos\MovieShop\MovieShop.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Grace\source\repos\MovieShop\MovieShop.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\Grace\source\repos\MovieShop\MovieShop.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Grace\source\repos\MovieShop\MovieShop.API\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Grace\source\repos\MovieShop\MovieShop.API\obj\Debug\netcoreapp3.1\MovieShop.API.csproj.CoreCompileInputs.cache
 C:\Users\Grace\source\repos\MovieShop\MovieShop.API\obj\Debug\netcoreapp3.1\MovieShop.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Grace\source\repos\MovieShop\MovieShop.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Grace\source\repos\MovieShop\MovieShop.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Grace\source\repos\MovieShop\MovieShop.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

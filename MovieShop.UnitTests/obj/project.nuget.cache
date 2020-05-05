@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "yf/RjYMiLB+ilZcfZYle6h6XuR69zRgGtSbgQcVPAtassLEPJEFncoEzlGWIFN8S8uSewkzD9rtozF25eCe5OQ==",
+  "dgSpecHash": "4ETYHUTub1k95kyTxDvKJnvdXB9LawL4SYVggjG9ZPls0xKLa6C2UqbQtwZcm4eIs29n96lhhWmdDMq+jkm5Ow==",
   "success": true,
   "projectFilePath": "C:\\Users\\Grace\\source\\repos\\MovieShop\\MovieShop.UnitTests\\MovieShop.UnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Grace\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
+    "C:\\Users\\Grace\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.3\\microsoft.aspnetcore.cryptography.internal.3.1.3.nupkg.sha512",
+    "C:\\Users\\Grace\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.3\\microsoft.aspnetcore.cryptography.keyderivation.3.1.3.nupkg.sha512",
     "C:\\Users\\Grace\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\Grace\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\Grace\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
