@@ -21,12 +21,12 @@ namespace MovieShop.Infrastructure.Repositories
         {
             var movies = await _dbContext.Purchases.Where(p => p.UserId == userId)
                                 .Include(f => f.Movie)
-                                .Select(f => new PurchasedMovieResponseModel
+                                .Select(f => new PurchaseResponseModel.PurchasedMovieResponseModel
                                 {
                                     Id = userId,
                                     Title = f.Movie.Title,
                                     PosterUrl = f.Movie.PosterUrl,
-                                    PurchasedDateTime = f.PurchaseDateTime
+                                    PurchaseDateTime = f.PurchaseDateTime
                                 }).ToListAsync();
             PurchaseResponseModel purchaseResponse = new PurchaseResponseModel
             {

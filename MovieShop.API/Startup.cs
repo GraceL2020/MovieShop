@@ -20,6 +20,11 @@ using MovieShop.Core.ServiceInterfaces;
 using MovieShop.Infrastructure.Data;
 using MovieShop.Infrastructure.Repositories;
 using MovieShop.Infrastructure.Services;
+using MovieShop.API.Infrastructure;
+using MovieShop.Core.MappingProfiles;    
+using AutoMapper;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.AspNetCore.Http;
 
 namespace MovieShop.API
 {
@@ -40,6 +45,9 @@ namespace MovieShop.API
                 options => options.UseSqlServer(
                     Configuration.GetConnectionString("MovieShopDbConnection")));
 
+            services.AddAutoMapper(typeof(Startup), typeof(MoviesMappingProfile));
+            services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
             //register repositories
             //services.AddScoped<IAsyncRepository<Genre>, EfRepository<Genre>>();
             services.AddScoped<IGenreRepository, GenreRepository>();
@@ -48,6 +56,7 @@ namespace MovieShop.API
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IPurchaseRepository, PurchaseRepository>();
             services.AddScoped<IFavoriteRepository, FavoriteRepository>();
+            services.AddScoped<IAsyncRepository<Review>, EfRepository<Review>>();
 
             //register services
             services.AddScoped<IGenreService, GenreService>();
@@ -55,6 +64,7 @@ namespace MovieShop.API
             services.AddScoped<ICastService, CastService>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<ICryptoService, CryptoService>();
+            services.AddScoped<ICurrentUserService, CurrentUserService>();
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
@@ -85,7 +95,8 @@ namespace MovieShop.API
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                //app.UseDeveloperExceptionPage();
+                app.UseExceptionMiddleware();
             }
             app.UseCors(builder =>
             {

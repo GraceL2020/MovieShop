@@ -131,8 +131,10 @@ C:\Users\Grace\source\repos\MovieShop\MovieShop.API\bin\Debug\netcoreapp3.1\Micr
 C:\Users\Grace\source\repos\MovieShop\MovieShop.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
 C:\Users\Grace\source\repos\MovieShop\MovieShop.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Grace\source\repos\MovieShop\MovieShop.API\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Grace\source\repos\MovieShop\MovieShop.API\obj\Debug\netcoreapp3.1\MovieShop.API.csproj.CoreCompileInputs.cache
-C:\Users\Grace\source\repos\MovieShop\MovieShop.API\obj\Debug\netcoreapp3.1\MovieShop.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Grace\source\repos\MovieShop\MovieShop.API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Grace\source\repos\MovieShop\MovieShop.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
 C:\Users\Grace\source\repos\MovieShop\MovieShop.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Grace\source\repos\MovieShop\MovieShop.API\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\Grace\source\repos\MovieShop\MovieShop.API\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Grace\source\repos\MovieShop\MovieShop.API\obj\Debug\netcoreapp3.1\MovieShop.API.csproj.CoreCompileInputs.cache
+C:\Users\Grace\source\repos\MovieShop\MovieShop.API\obj\Debug\netcoreapp3.1\MovieShop.API.MvcApplicationPartsAssemblyInfo.cache

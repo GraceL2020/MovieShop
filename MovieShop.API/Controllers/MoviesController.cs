@@ -50,5 +50,13 @@ namespace MovieShop.API.Controllers
             return Ok(movies);
         }
 
+        [HttpGet]
+        [Route("")]
+        public async Task<IActionResult> GetMoviesByPagination([FromQuery] int pageSize = 20, [FromQuery] int pageIndex = 1,string title = "")
+        {
+            var movies = await _movieService.GetMoviesByPagination(pageSize, pageIndex, title);
+            return Ok(movies);
+        }
+
     }
 }

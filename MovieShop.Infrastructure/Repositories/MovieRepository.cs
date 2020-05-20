@@ -20,9 +20,9 @@ namespace MovieShop.Infrastructure.Repositories
         public override async Task<Movie> GetByIdAsync(int id)
         {
             var movie = await _dbContext.Movies.Where(m=>m.Id == id)
-                        //.Include(m => m.MovieCasts).ThenInclude(m => m.Cast)
-                        //.Include(m => m.MovieGenres)
-                        //.ThenInclude(m => m.Genre)
+                        .Include(m => m.MovieCasts).ThenInclude(mc => mc.Cast)
+                        .Include(m => m.MovieGenres)
+                        .ThenInclude(mg => mg.Genre)
                         .FirstOrDefaultAsync();
             //var movie = await _dbContext.Set<Movie>().Where(m=>m.Id==id)
             //                //.Include(m=>m.MovieGenres).ThenInclude(mg=>mg.Genre)

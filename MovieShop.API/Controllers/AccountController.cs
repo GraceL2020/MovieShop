@@ -12,6 +12,8 @@ using MovieShop.Core.Entities;
 using System.Security.Claims;
 using Microsoft.Extensions.Configuration;
 using System.Text;
+using Newtonsoft.Json;
+using Microsoft.Extensions.Logging;
 
 namespace MovieShop.API.Controllers
 {
@@ -21,11 +23,13 @@ namespace MovieShop.API.Controllers
     {
         private readonly IUserService _userService;
         private readonly IConfiguration _config;
+        private readonly ILogger<AccountController> _logger;
 
-        public AccountController(IUserService userService, IConfiguration config)
+        public AccountController(IUserService userService, IConfiguration config, ILogger<AccountController> logger)
         {
             _userService = userService;
             _config = config;
+            _logger = logger;
         }
 
         [HttpPost]
@@ -33,6 +37,7 @@ namespace MovieShop.API.Controllers
         public async Task<IActionResult> RegisterUserAsync([FromBody]UserRegisterRequestModel user)
         {
             var createdUser = await _userService.CreateUser(user);
+            _logger.LogInformation("User Registred", createdUser.Id);
             return Ok(createdUser);
         }
 
@@ -61,12 +66,19 @@ namespace MovieShop.API.Controllers
 
         private string GenerateJWT(User user)
         {
+            var roles = new List<String>();
+            foreach(var ur in user.UserRoles)
+            {
+                roles.Add(ur.Role.Name);
+            }
             // claims are the one which will identity the user
             var claims = new List<Claim> {
                     new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                     new Claim(JwtRegisteredClaimNames.GivenName, user.FirstName),
                     new Claim(JwtRegisteredClaimNames.FamilyName, user.LastName),
-                    new Claim(JwtRegisteredClaimNames.Email, user.Email)
+                    new Claim(JwtRegisteredClaimNames.Email, user.Email),
+                    new Claim("role",JsonConvert.SerializeObject(roles))
+                    //new Claim(JwtRegisteredClaimNames.,roles)
                     // we can store roles also
             };
             var identityClaims = new ClaimsIdentity();
